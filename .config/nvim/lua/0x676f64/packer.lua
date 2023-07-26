@@ -11,24 +11,29 @@ use {
 	requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+use('nvim-treesitter/nvim-treesitter-context')
 use ('ThePrimeagen/harpoon')
 use('mbbill/undotree')
 use('tpope/vim-fugitive')
-use { "ellisonleao/gruvbox.nvim"}
 use ('nvim-lualine/lualine.nvim')
 use ('onsails/lspkind-nvim')
 use ('nvim-tree/nvim-web-devicons')
 use ('vim-airline/vim-airline')
 use ('ThePrimeagen/refactoring.nvim')
-use("nvim-treesitter/nvim-treesitter-context");
 use('barrett-ruth/live-server.nvim')
+use 'rcarriga/nvim-notify'
+use "lukas-reineke/indent-blankline.nvim"
+use ('Mofiqul/dracula.nvim')
 use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
 }
+use ('monkoose/matchparen.nvim')
+use 'sheerun/vim-polyglot'
+use {'prettier/vim-prettier', run = 'yarn install'}
 use('nvim-tree/nvim-tree.lua')
-
 use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
